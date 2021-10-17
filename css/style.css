@@ -1,0 +1,175 @@
+/* Variables */
+@font-face {
+  font-family: "RedHatDisplay-Bold";
+  src: url("../RedHatDisplay-VariableFont_wght.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "RedHatDisplay-SemiBold";
+  src: url("../RedHatDisplay-VariableFont_wght.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("../RedHatDisplay-VariableFont_wght.ttf");
+}
+* {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+a:hover, button {
+  cursor: pointer;
+}
+
+body {
+  text-align: center;
+  background: #e0e8ff;
+  padding: 0;
+  margin: 0;
+  font-family: "RedHatDisplay";
+}
+body:before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background: url("../images/pattern-background-desktop.svg");
+  background-repeat-y: no-repeat;
+  position: absolute;
+  z-index: 1;
+}
+
+.card {
+  position: absolute;
+  margin: 0 auto;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 450px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+.card > img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+}
+.card > h1 {
+  font-size: 28px;
+  color: #1f2f56;
+  font-family: "RedHatDisplay-Bold";
+  margin-top: 45px;
+  margin-bottom: 17px;
+}
+.card > p {
+  width: 354px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: #717FA6;
+}
+.card > .selectedPlan {
+  background: #f5f7ff;
+  width: 354px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.card > .selectedPlan > a {
+  color: #382AE1;
+  font-family: "RedHatDisplay-SemiBold";
+}
+.card > .selectedPlan > a:hover {
+  color: #766CF1;
+  text-decoration: none;
+}
+.card > .selectedPlan > .container {
+  display: flex;
+}
+.card > .selectedPlan > .container > .text {
+  color: #717FA6;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+.card > .selectedPlan > .container > .text > strong {
+  font-family: "RedHatDisplay-SemiBold";
+  color: #1F2E55;
+}
+.card > .selectedPlan > .container:before {
+  background: url("../images/icon-music.svg");
+  content: "";
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.priButton {
+  display: block;
+  margin: 0 auto;
+  background-color: #382ae1;
+  color: #FFFFFF;
+  width: 100%;
+  max-width: 354px;
+  padding: 20px;
+  font-family: "RedHatDisplay-SemiBold";
+  border-radius: 20px;
+  border: 0;
+  font-size: 15px;
+  box-shadow: 0px 10px 10px rgba(56, 42, 225, 0.2);
+  margin-bottom: 32px;
+}
+.priButton:hover {
+  background-color: #766CF1;
+}
+
+.secButton {
+  background: none;
+  border: none;
+  margin-bottom: 48px;
+  font-size: 15px;
+  font-family: "RedHatDisplay-SemiBold";
+  color: #717FA6;
+}
+.secButton:hover {
+  color: #1F2E55;
+}
+
+/* Mobile styles */
+@media (max-width: 375px) {
+  .card {
+    margin: 0 auto;
+    max-width: 327px;
+  }
+
+  body:before {
+    display: none;
+  }
+
+  .card > .selectedPlan {
+    max-width: 279px;
+  }
+
+  .priButton {
+    max-width: 279px;
+  }
+
+  .card > h1 {
+    font-size: 22px;
+    margin-top: 32px;
+  }
+
+  .card > p {
+    max-width: 279px;
+  }
+
+  .card > .selectedPlan {
+    padding: 15px;
+  }
+}
